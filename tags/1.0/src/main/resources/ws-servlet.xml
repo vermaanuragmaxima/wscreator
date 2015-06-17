@@ -1,0 +1,57 @@
+<!-- #author: Anurag Verma -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<mvc:annotation-driven />
+
+	<bean
+		class="com.maximaconsulting.webservices.rest.inventory.InventoryController" />
+		
+	<bean class="WSCreatorRestProxyController" init-method="init" >
+		<property name="servicesBeanStore" ref="servicesBeanStore"></property>
+	</bean>
+
+	<bean class="com.maximaconsulting.webservices.soap.SoapServiceExporter" />
+
+	<bean id="servicesBeanStore"
+		class="com.maximaconsulting.webservices.rest.init.ServicesBeanStore" />
+
+	<bean id="initializer" init-method="init"
+		class="com.maximaconsulting.webservices.rest.init.RestInitializer">
+		<property name="jsonView">
+			<!-- JSON View -->
+			<bean id="jsonView"
+				class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+		</property>
+		<property name="xmlView">
+			<!-- JAXB XML View -->
+			<bean id="xmlView"
+				class="org.springframework.web.servlet.view.xml.MarshallingView">
+				<constructor-arg>
+					<bean class="org.springframework.oxm.castor.CastorMarshaller">
+						<property name="suppressNamespaces" value="true" />
+						<property name="suppressXsiType" value="true" />
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+		<property name="viewList" ref="views" />
+	</bean>
+
+	<bean id="views" class="java.util.ArrayList"></bean>
+
+	<bean depends-on="initializer"
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<property name="defaultViews" ref="views" />
+		<property name="ignoreAcceptHeader" value="false" />
+	</bean>
+</beans>
