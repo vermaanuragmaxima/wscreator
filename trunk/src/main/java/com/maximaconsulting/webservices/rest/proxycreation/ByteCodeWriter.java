@@ -1,4 +1,4 @@
-package com.maximaconsulting.webservices.rest.javassist;
+package com.maximaconsulting.webservices.rest.proxycreation;
 
 import java.util.Map;
 
