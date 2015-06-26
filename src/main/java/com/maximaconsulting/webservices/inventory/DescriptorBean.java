@@ -1,4 +1,4 @@
-package com.maximaconsulting.webservices.rest.inventory;
+package com.maximaconsulting.webservices.inventory;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -10,7 +10,7 @@ import java.util.Map;
 import javax.jws.WebParam;
 
 import com.maximaconsulting.webservices.WebServicesScanner;
-import com.maximaconsulting.webservices.rest.javassist.RestServiceCreator;
+import com.maximaconsulting.webservices.rest.proxycreation.RestServiceCreator;
 
 /**
  * Backing Bean for descriptor.jsp

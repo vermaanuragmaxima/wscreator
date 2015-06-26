@@ -7,7 +7,7 @@ import java.util.Map;
 import javassist.CannotCompileException;
 import javassist.NotFoundException;
 
-import com.maximaconsulting.webservices.rest.javassist.TypeConverterCreator;
+import com.maximaconsulting.webservices.rest.proxycreation.TypeConverterCreator;
 
 /**
  * A central place to find all the type converters

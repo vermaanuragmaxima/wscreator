@@ -9,7 +9,7 @@ import javassist.CtNewMethod;
 import javassist.NotFoundException;
 
 import com.maximaconsulting.webservices.annotations.HiddenMethod;
-import com.maximaconsulting.webservices.rest.javassist.ByteCodeWriter;
+import com.maximaconsulting.webservices.rest.proxycreation.ByteCodeWriter;
 
 /**
  * SOAP proxy creator, method signature is similar to the actual method.

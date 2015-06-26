@@ -15,7 +15,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.maximaconsulting.webservices.WebServicesScanner;
-import com.maximaconsulting.webservices.rest.javassist.RestServiceCreator;
+import com.maximaconsulting.webservices.rest.proxycreation.RestServiceCreator;
 
 /**
  * This will be exporting the REST services for all the interfaces annotated

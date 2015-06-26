@@ -3,7 +3,7 @@
 	<groupId>com.maximaconsulting</groupId>
 	<artifactId>wscreator</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>An awesome library to add SOAP and REST web-services to your project with minimum efforts and time.</description>
 	<url>http://sourceforge.net/projects/ws-creator/</url>
@@ -102,6 +102,11 @@
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-transports-http</artifactId>
 			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>saxon-dom</artifactId>
+			<version>8.7</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>

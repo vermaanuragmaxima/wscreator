@@ -1,4 +1,4 @@
-package com.maximaconsulting.webservices.rest.inventory;
+package com.maximaconsulting.webservices.inventory;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

@@ -13,7 +13,7 @@
 	<mvc:annotation-driven />
 
 	<bean
-		class="com.maximaconsulting.webservices.rest.inventory.InventoryController" />
+		class="com.maximaconsulting.webservices.inventory.InventoryController" />
 		
 	<bean class="WSCreatorRestProxyController" init-method="init" >
 		<property name="servicesBeanStore" ref="servicesBeanStore"></property>

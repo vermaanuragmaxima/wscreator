@@ -14,7 +14,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.BeanFactory;
 
 import com.maximaconsulting.webservices.WebServicesScanner;
-import com.maximaconsulting.webservices.rest.javassist.ByteCodeWriter;
+import com.maximaconsulting.webservices.rest.proxycreation.ByteCodeWriter;
 
 /**
  * Creates proxy Implementation classes for SOAP.
